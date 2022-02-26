@@ -1,2 +1,1 @@
-# mdx-blog
-Created with CodeSandbox
+# blog.neranjana-tk

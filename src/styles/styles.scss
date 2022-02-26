@@ -1,0 +1,1055 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Roboto, serif;
+}
+
+:root {
+  --fs-0: 1rem;
+  --fs-1: 1.2rem;
+  --fs-2: 1.5rem;
+  --fs-3: 1.7em;
+  --fs-4: 2rem;
+  --fs-5: 2.2rem;
+  --fs-6: 2.5rem;
+  --fs-7: 2.7em;
+  --fs-8: 3rem;
+
+  --body-width: 1300px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  background-color: #0b0b0b;
+  color: white;
+}
+
+.container {
+  max-width: var(--body-width);
+  margin: auto;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--body-width);
+  width: 100%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 3.5rem;
+  padding: 0 10px;
+  background-color: #0b0b0be0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  gap: 1rem;
+
+  p {
+    font-size: var(--fs-0);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.intro {
+  .intro-bg {
+    width: 100%;
+    min-height: 45vh;
+    max-height: 400px;
+    position: relative;
+    top: 0;
+    z-index: -99;
+
+    .intro-overlay {
+      position: absolute;
+      background-color: #050505d7;
+      opacity: 70%;
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+  }
+
+  .intro-text {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    .title {
+      font-size: var(--fs-5);
+      font-weight: 600;
+      padding-bottom: 1rem;
+    }
+
+    .subtitle {
+      font-size: var(--fs-1);
+      line-height: 1.6rem;
+
+      a {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.post-container {
+  padding: 20px 15px;
+  max-width: 800px;
+  margin: auto;
+
+  .post-container-top {
+    padding-bottom: 10px;
+
+    .title {
+      font-size: var(--fs-3);
+      font-weight: 600;
+    }
+  }
+
+  ul.posts {
+    list-style: none;
+    line-height: 2.75rem;
+    padding-bottom: 1rem;
+
+    li {
+      border-bottom: 1px solid #373737;
+      font-weight: 500;
+      display: flex;
+      font-size: var(--fs-1);
+
+      .post-title {
+        opacity: 0.85;
+        transition: 200ms opacity ease-in-out;
+        width: max-content;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .date {
+        width: 9ch;
+      }
+
+      span {
+        padding: 0 5px;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.post {
+  .post-intro {
+    position: relative;
+
+    .post-img {
+      width: 100%;
+      height: 60vh;
+      max-height: 400px;
+      top: 0;
+      z-index: -99;
+
+      .post-img-overlay {
+        position: absolute;
+        background-color: #050505d7;
+        opacity: 70%;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+    }
+
+    .post-head {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 99;
+
+      .post-title {
+        font-size: var(--fs-5);
+        font-weight: 600;
+      }
+      .date {
+        font-size: var(--fs-2);
+        font-weight: 500;
+      }
+    }
+  }
+
+  .post-content {
+    max-width: 85%;
+    line-height: 1.9rem;
+    padding-top: 1rem;
+
+    // Reset to Defaults
+
+    address,
+    article,
+    aside,
+    blockquote,
+    body,
+    caption,
+    center,
+    col,
+    colgroup,
+    dd,
+    dir,
+    div,
+    dl,
+    dt,
+    fieldset,
+    figcaption,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    hgroup,
+    hr,
+    html,
+    legend,
+    li,
+    listing,
+    main,
+    marquee,
+    menu,
+    nav,
+    noframes,
+    ol,
+    p,
+    plaintext,
+    pre,
+    section,
+    summary,
+    table,
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    tr,
+    ul,
+    xmp {
+      unicode-bidi: isolate;
+    }
+
+    article,
+    aside,
+    details,
+    div,
+    dt,
+    figcaption,
+    footer,
+    form,
+    header,
+    hgroup,
+    html,
+    main,
+    nav,
+    section,
+    summary {
+      display: block;
+    }
+
+    p,
+    dl,
+    multicol {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+    }
+
+    dd {
+      display: block;
+      margin-inline-start: 40px;
+    }
+
+    blockquote,
+    figure {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 40px;
+      margin-inline-end: 40px;
+    }
+
+    address {
+      display: block;
+      font-style: italic;
+    }
+
+    center {
+      display: block;
+      text-align: -moz-center;
+    }
+
+    blockquote[type="cite"] {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      padding-inline-start: 1em;
+      border-inline-start: solid;
+      border-color: blue;
+      border-width: thin;
+    }
+
+    h1 {
+      display: block;
+      font-size: 2em;
+      font-weight: bold;
+      margin-block-start: 0.67em;
+      margin-block-end: 0.67em;
+    }
+
+    h2,
+    :is(article, aside, nav, section) h1 {
+      display: block;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-block-start: 0.83em;
+      margin-block-end: 0.83em;
+    }
+
+    h3,
+    :is(article, aside, nav, section) :is(article, aside, nav, section) h1 {
+      display: block;
+      font-size: 1.17em;
+      font-weight: bold;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+    }
+
+    h4,
+    :is(article, aside, nav, section)
+      :is(article, aside, nav, section)
+      :is(article, aside, nav, section)
+      h1 {
+      display: block;
+      font-size: 1em;
+      font-weight: bold;
+      margin-block-start: 1.33em;
+      margin-block-end: 1.33em;
+    }
+
+    h5,
+    :is(article, aside, nav, section)
+      :is(article, aside, nav, section)
+      :is(article, aside, nav, section)
+      :is(article, aside, nav, section)
+      h1 {
+      display: block;
+      font-size: 0.83em;
+      font-weight: bold;
+      margin-block-start: 1.67em;
+      margin-block-end: 1.67em;
+    }
+
+    h6,
+    :is(article, aside, nav, section)
+      :is(article, aside, nav, section)
+      :is(article, aside, nav, section)
+      :is(article, aside, nav, section)
+      :is(article, aside, nav, section)
+      h1 {
+      display: block;
+      font-size: 0.67em;
+      font-weight: bold;
+      margin-block-start: 2.33em;
+      margin-block-end: 2.33em;
+    }
+
+    /* tables */
+
+    table {
+      display: table;
+      border-spacing: 2px;
+      border-collapse: separate;
+      box-sizing: border-box;
+      text-indent: 0;
+    }
+
+    table[align="left"] {
+      float: left;
+    }
+
+    table[align="right"] {
+      float: right;
+      text-align: start;
+    }
+
+    table[rules] {
+      border-width: thin;
+      border-style: hidden;
+    }
+
+    table:-moz-table-border-nonzero {
+      border-width: thin;
+      border-style: outset;
+    }
+
+    table[frame] {
+      border: thin hidden;
+    }
+
+    table[frame="void"] {
+      border-style: hidden;
+    }
+    table[frame="above"] {
+      border-style: outset hidden hidden hidden;
+    }
+    table[frame="below"] {
+      border-style: hidden hidden outset hidden;
+    }
+    table[frame="lhs"] {
+      border-style: hidden hidden hidden outset;
+    }
+    table[frame="rhs"] {
+      border-style: hidden outset hidden hidden;
+    }
+    table[frame="hsides"] {
+      border-style: outset hidden;
+    }
+    table[frame="vsides"] {
+      border-style: hidden outset;
+    }
+    table[frame="box"],
+    table[frame="border"] {
+      border-style: outset;
+    }
+
+    table:-moz-table-border-nonzero > * > tr > td,
+    table:-moz-table-border-nonzero > * > tr > th,
+    table:-moz-table-border-nonzero > * > td,
+    table:-moz-table-border-nonzero > * > th,
+    table:-moz-table-border-nonzero > td,
+    table:-moz-table-border-nonzero > th {
+      border-width: thin;
+      border-style: inset;
+    }
+
+    table[rules]:not([rules="none"], [rules=""]) {
+      border-collapse: collapse;
+    }
+
+    table[rules]:not([rules=""]) > tr > td,
+    table[rules]:not([rules=""]) > * > tr > td,
+    table[rules]:not([rules=""]) > tr > th,
+    table[rules]:not([rules=""]) > * > tr > th,
+    table[rules]:not([rules=""]) > td,
+    table[rules]:not([rules=""]) > th {
+      border-width: thin;
+      border-style: none;
+    }
+
+    table[rules][rules="none"] > tr > td,
+    table[rules][rules="none"] > * > tr > td,
+    table[rules][rules="none"] > tr > th,
+    table[rules][rules="none"] > * > tr > th,
+    table[rules][rules="none"] > td,
+    table[rules][rules="none"] > th {
+      border-width: thin;
+      border-style: none;
+    }
+
+    table[rules][rules="all"] > tr > td,
+    table[rules][rules="all"] > * > tr > td,
+    table[rules][rules="all"] > tr > th,
+    table[rules][rules="all"] > * > tr > th,
+    table[rules][rules="all"] > td,
+    table[rules][rules="all"] > th {
+      border-width: thin;
+      border-style: solid;
+    }
+
+    table[rules][rules="rows"] > tr,
+    table[rules][rules="rows"] > * > tr {
+      border-block-start-width: thin;
+      border-block-end-width: thin;
+      border-block-start-style: solid;
+      border-block-end-style: solid;
+    }
+
+    table[rules][rules="cols"] > tr > td,
+    table[rules][rules="cols"] > * > tr > td,
+    table[rules][rules="cols"] > tr > th,
+    table[rules][rules="cols"] > * > tr > th {
+      border-inline-start-width: thin;
+      border-inline-end-width: thin;
+      border-inline-start-style: solid;
+      border-inline-end-style: solid;
+    }
+
+    table[rules][rules="groups"] > colgroup {
+      border-inline-start-width: thin;
+      border-inline-end-width: thin;
+      border-inline-start-style: solid;
+      border-inline-end-style: solid;
+    }
+    table[rules][rules="groups"] > tfoot,
+    table[rules][rules="groups"] > thead,
+    table[rules][rules="groups"] > tbody {
+      border-block-start-width: thin;
+      border-block-end-width: thin;
+      border-block-start-style: solid;
+      border-block-start-style: solid;
+    }
+
+    caption {
+      display: table-caption;
+      text-align: center;
+    }
+
+    table[align="center"] > caption {
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+    }
+
+    table[align="center"] > caption[align="left"]:dir(ltr) {
+      margin-inline-end: 0;
+    }
+    table[align="center"] > caption[align="left"]:dir(rtl) {
+      margin-inline-start: 0;
+    }
+
+    table[align="center"] > caption[align="right"]:dir(ltr) {
+      margin-inline-start: 0;
+    }
+    table[align="center"] > caption[align="right"]:dir(rtl) {
+      margin-inline-end: 0;
+    }
+
+    tr {
+      display: table-row;
+      vertical-align: inherit;
+    }
+
+    col {
+      display: table-column;
+    }
+
+    colgroup {
+      display: table-column-group;
+    }
+
+    tbody {
+      display: table-row-group;
+      vertical-align: middle;
+    }
+
+    thead {
+      display: table-header-group;
+      vertical-align: middle;
+    }
+
+    tfoot {
+      display: table-footer-group;
+      vertical-align: middle;
+    }
+
+    table > tr {
+      vertical-align: middle;
+    }
+
+    td {
+      display: table-cell;
+      vertical-align: inherit;
+      text-align: unset;
+      padding: 1px;
+    }
+
+    th {
+      display: table-cell;
+      vertical-align: inherit;
+      font-weight: bold;
+      padding: 1px;
+    }
+
+    tr > form:-moz-is-html,
+    tbody > form:-moz-is-html,
+    thead > form:-moz-is-html,
+    tfoot > form:-moz-is-html,
+    table > form:-moz-is-html {
+      display: none !important;
+    }
+
+    table[bordercolor] > tbody,
+    table[bordercolor] > thead,
+    table[bordercolor] > tfoot,
+    table[bordercolor] > col,
+    table[bordercolor] > colgroup,
+    table[bordercolor] > tr,
+    table[bordercolor] > * > tr,
+    table[bordercolor] > tr > td,
+    table[bordercolor] > * > tr > td,
+    table[bordercolor] > tr > th,
+    table[bordercolor] > * > tr > th {
+      border-color: inherit;
+    }
+
+    q:before {
+      content: open-quote;
+    }
+
+    q:after {
+      content: close-quote;
+    }
+
+    b,
+    strong {
+      font-weight: bolder;
+    }
+
+    i,
+    cite,
+    em,
+    var,
+    dfn {
+      font-style: italic;
+    }
+
+    tt,
+    code,
+    kbd,
+    samp {
+      font-family: -moz-fixed;
+    }
+
+    u,
+    ins {
+      text-decoration: underline;
+    }
+
+    s,
+    strike,
+    del {
+      text-decoration: line-through;
+    }
+
+    big {
+      font-size: larger;
+    }
+
+    small {
+      font-size: smaller;
+    }
+
+    sub {
+      vertical-align: sub;
+      font-size: smaller;
+    }
+
+    sup {
+      vertical-align: super;
+      font-size: smaller;
+    }
+
+    nobr {
+      white-space: nowrap;
+    }
+
+    mark {
+      background: yellow;
+      color: black;
+    }
+
+    abbr[title],
+    acronym[title] {
+      text-decoration: dotted underline;
+    }
+
+    ul,
+    menu,
+    dir {
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      padding-inline-start: 40px;
+    }
+
+    @supports -moz-bool-pref("dom.menuitem.enabled") {
+      menu[type="context"] {
+        display: none !important;
+      }
+    }
+
+    ul,
+    ol,
+    menu {
+      counter-reset: list-item;
+    }
+
+    ol {
+      display: block;
+      list-style-type: decimal;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      padding-inline-start: 40px;
+    }
+
+    li {
+      display: list-item;
+      text-align: match-parent;
+    }
+
+    :is(ul, ol, dir, menu, dl) ul,
+    :is(ul, ol, dir, menu, dl) ol,
+    :is(ul, ol, dir, menu, dl) dir,
+    :is(ul, ol, dir, menu, dl) menu,
+    :is(ul, ol, dir, menu, dl) dl {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+
+    :is(ol, ul, menu, dir) ul,
+    :is(ol, ul, menu, dir) menu,
+    :is(ol, ul, menu, dir) dir {
+      list-style-type: circle;
+    }
+
+    :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
+    :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) menu,
+    :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) dir {
+      list-style-type: square;
+    }
+
+    hr {
+      display: block;
+      border: 1px inset;
+      margin-block-start: 0.5em;
+      margin-block-end: 0.5em;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      color: gray;
+      -moz-float-edge: margin-box;
+      box-sizing: content-box;
+    }
+
+    hr[size="1"] {
+      border-style: solid none none none;
+    }
+
+    input:-moz-broken::before,
+    img:-moz-broken::before {
+      content: -moz-alt-content !important;
+      unicode-bidi: isolate;
+    }
+
+    object:-moz-broken > *|* {
+      vertical-align: inherit;
+    }
+
+    img[usemap],
+    object[usemap] {
+      color: blue;
+    }
+
+    frameset {
+      display: block !important;
+      overflow: clip;
+      position: static !important;
+      float: none !important;
+      border: none !important;
+    }
+
+    frame {
+      border-radius: 0 !important;
+    }
+
+    iframe {
+      border: 2px inset;
+    }
+
+    spacer {
+      position: static !important;
+      float: none !important;
+    }
+
+    canvas {
+      user-select: none;
+    }
+
+    iframe:focus-visible,
+    body:focus-visible,
+    html:focus-visible {
+      outline-style: none;
+    }
+
+    base,
+    basefont,
+    datalist,
+    head,
+    link,
+    meta,
+    noembed,
+    noframes,
+    param,
+    rp,
+    script,
+    style,
+    template,
+    title {
+      display: none;
+    }
+
+    area {
+      display: none !important;
+    }
+
+    iframe:fullscreen {
+      border: none !important;
+      padding: unset !important;
+    }
+
+    video {
+      object-fit: contain;
+    }
+
+    video > img:-moz-native-anonymous {
+      object-fit: inherit !important;
+      object-position: inherit !important;
+    }
+
+    audio:not([controls]) {
+      display: none !important;
+    }
+
+    audio[controls] {
+      writing-mode: horizontal-tb !important;
+    }
+
+    *|*::-moz-html-canvas-content {
+      display: block !important;
+      transform: translate(0) !important;
+    }
+
+    video > .caption-box {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    ::cue {
+      color: rgba(255, 255, 255, 1);
+      white-space: pre-line;
+      background-color: rgba(0, 0, 0, 0.8);
+      font: var(--cue-font-size) sans-serif;
+      writing-mode: var(--cue-writing-mode, inherit);
+      overflow-wrap: break-word;
+    }
+
+    details > summary:-moz-native-anonymous {
+      user-select: none;
+    }
+
+    details > summary:is(:first-of-type, :-moz-native-anonymous) {
+      display: list-item;
+      counter-increment: list-item 0;
+      list-style: disclosure-closed inside;
+    }
+
+    details[open] > summary:is(:first-of-type, :-moz-native-anonymous) {
+      list-style-type: disclosure-open;
+    }
+
+    details > summary:first-of-type > *|* {
+      list-style-position: initial;
+    }
+
+    dialog {
+      position: absolute;
+      display: block;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
+      color: black;
+      margin: auto;
+      border-width: initial;
+      border-style: solid;
+      border-color: initial;
+      border-image: initial;
+      padding: 1em;
+      background: white;
+      width: -moz-fit-content;
+      height: -moz-fit-content;
+    }
+
+    dialog:not([open]) {
+      display: none;
+    }
+
+    dialog:not([inert]):-moz-topmost-modal-dialog {
+      -moz-inert: none;
+    }
+
+    dialog:-moz-modal-dialog {
+      -moz-top-layer: top !important;
+      position: fixed;
+      overflow: auto;
+      inset-block-start: 0;
+      inset-block-end: 0;
+      max-width: calc(100% - 6px - 2em);
+      max-height: calc(100% - 6px - 2em);
+    }
+
+    dialog::backdrop {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    marquee {
+      inline-size: -moz-available;
+      display: inline-block;
+      vertical-align: text-bottom;
+      text-align: start;
+    }
+
+    marquee:is([direction="up"], [direction="down"]) {
+      block-size: 200px;
+    }
+
+    // Reset Ends Here.
+
+    p {
+      font-size: var(--fs-1);
+      padding-left: 20px;
+    }
+
+    img {
+      display: block;
+      max-width: 90%;
+      padding: 0.75rem;
+      margin: auto;
+    }
+  }
+}
+
+.post-footer {
+  padding: 15px 10px;
+  text-align: left;
+  color: #969696;
+  line-height: 1.7rem;
+  border-top: 1px solid #373737;
+
+  a {
+    color: #d5d5d5;
+  }
+}
+
+.all-posts {
+  padding: 0;
+
+  .post-container-top {
+    padding-bottom: 0px;
+
+    .title {
+      font-size: var(--fs-4);
+      font-weight: 600;
+      padding-bottom: 10px;
+    }
+  }
+
+  .go-back {
+    font-size: var(--fs-1);
+    font-weight: 600;
+    padding: 15px 0;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  :root {
+    --fs-0: 0.875rem;
+    --fs-1: 1.05rem;
+    --fs-2: 1.25rem;
+    --fs-3: 1.5em;
+    --fs-4: 1.75rem;
+    --fs-5: 2rem;
+    --fs-6: 2.25rem;
+    --fs-7: 2.5em;
+    --fs-8: 2.75rem;
+
+    --body-width: 900px;
+  }
+
+  .post {
+    padding-bottom: 10px;
+
+    .post-intro {
+      .post-head {
+        left: 10px;
+      }
+    }
+
+    .post-content {
+      line-height: 1.7rem;
+
+      p {
+        padding: 0 15px 0 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .post {
+    .post-content {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .intro {
+    .intro-text {
+      top: 5%;
+    }
+  }
+}
+
+@supports (backdrop-filter: blur(10px)) {
+  .post {
+    .post-intro {
+      nav {
+        background-color: #0b0b0b88;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+    }
+  }
+}
